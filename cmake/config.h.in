@@ -1,0 +1,28 @@
+#ifndef LTFS_CONFIG_H
+#define LTFS_CONFIG_H
+
+/* Headers */
+#cmakedefine HAVE_FCNTL_H 1
+#cmakedefine HAVE_LIMITS_H 1
+#cmakedefine HAVE_STDINT_H 1
+#cmakedefine HAVE_STDLIB_H 1
+#cmakedefine HAVE_STRING_H 1
+#cmakedefine HAVE_UNISTD_H 1
+
+/* Functions */
+#cmakedefine HAVE_STRDUP 1
+#cmakedefine HAVE_STRNDUP 1
+#cmakedefine HAVE_STRNLEN 1
+
+/* Structures */
+#cmakedefine HAVE_STRUCT_STAT_ST_BLKSIZE 1
+#cmakedefine HAVE_STRUCT_STAT_ST_RDEV 1
+
+/* XML */
+#cmakedefine HAVE_XML_READER_SETUP 1
+#cmakedefine HAVE_XML_PARSE_HUGE 1
+
+/* Types */
+#define SIZEOF_TIME_T @SIZEOF_TIME_T@
+
+#endif
