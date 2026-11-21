@@ -7,6 +7,14 @@ include(GNUInstallDirs)
 add_compile_definitions(
     LTFS_CONFIG_FILE="${CMAKE_INSTALL_FULL_SYSCONFDIR}/altfs.conf"
     LTFS_BASE_DIR="${CMAKE_INSTALL_PREFIX}"
+    _GNU_SOURCE
+    _FILE_OFFSET_BITS=64
+)
+
+link_libraries(
+    PkgConfig::LIBFUSE
+    PkgConfig::LIBXML2
+    PkgConfig::LIBUUID
 )
 
 # libaltfs

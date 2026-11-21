@@ -74,11 +74,6 @@ configure_file(
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-add_compile_definitions(
-    _GNU_SOURCE
-    _FILE_OFFSET_BITS=64
-)
-
 ###
 
 add_subdirectory(src)
