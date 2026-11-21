@@ -1,5 +1,13 @@
+# Some global configs 
 # Add present directory to includes
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+include(GNUInstallDirs)
+
+add_compile_definitions(
+    LTFS_CONFIG_FILE="${CMAKE_INSTALL_FULL_SYSCONFDIR}/altfs.conf"
+    LTFS_BASE_DIR="${CMAKE_INSTALL_PREFIX}"
+)
 
 # libaltfs
 add_library(libaltfs SHARED
@@ -224,6 +232,7 @@ add_executable(mkaltfs
 # Libraries linking
 
 # Installation rules
+include(GNUInstallDirs)
 
 install(TARGETS
         altfs
